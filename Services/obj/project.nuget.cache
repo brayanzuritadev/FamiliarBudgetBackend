@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pDdsyoKtpSgq5LlwGhgM3Z+Pt90Wzjg2Nob9mMLehAAhTKjgbHh0poeiJ5kPxVahNoziSr6UqreCDey5x+tlAA==",
+  "dgSpecHash": "YvazMvxgHe96y0IG0IAdlxLGXWoPL5mFOwcIxXk9o3+6KngKKhVtsFiL04aHtCy/UGNX5rf3JHOz1g7yrk2dxA==",
   "success": true,
   "projectFilePath": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,8 @@
     "C:\\Users\\Brayan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
+    "C:\\Users\\Brayan\\.nuget\\packages\\microsoft.aspnetcore.http.abstractions\\2.2.0\\microsoft.aspnetcore.http.abstractions.2.2.0.nupkg.sha512",
+    "C:\\Users\\Brayan\\.nuget\\packages\\microsoft.aspnetcore.http.features\\2.2.0\\microsoft.aspnetcore.http.features.2.2.0.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",

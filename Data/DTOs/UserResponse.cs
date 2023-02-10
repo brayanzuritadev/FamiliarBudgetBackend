@@ -9,9 +9,11 @@ namespace Data.DTOs
 {
     public class UserResponse
     {
+        public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
         public int RoleId { get; set; }
+        public int FamilyId { get; set; }
         public string FamilyCode { get; set; }
         public string FamilyName { get; set;}
     }

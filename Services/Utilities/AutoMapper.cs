@@ -3,6 +3,7 @@ using Data.DTOs;
 using Data.Entity;
 using System;
 using System.Collections.Generic;
+using System.IO.Pipes;
 using System.Linq;
 using System.Runtime;
 using System.Text;
@@ -17,6 +18,11 @@ namespace Services.Utilities
             CreateMap<UserCreation,User>();
             CreateMap<FamilyCreation,Family>();
             CreateMap<User, UserResponse>();
+            CreateMap<TransactionCreation,Transaction>();
+            CreateMap<Transaction, TransactionResponse>()
+                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.User.Name));
+                
+            CreateMap<User,TransactionResponse>();
         }
     }
 }

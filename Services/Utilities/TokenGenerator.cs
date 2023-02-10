@@ -1,5 +1,6 @@
 ﻿using Data.DTOs;
 using Data.Entity;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using System;
@@ -15,10 +16,12 @@ namespace Services.Utilities
     public class TokenGenerator
     {
         private readonly IConfiguration configuration;
+        private readonly IHttpContextAccessor httpContextAccessor;
 
-        public TokenGenerator(IConfiguration configuration)
+        public TokenGenerator(IConfiguration configuration, IHttpContextAccessor httpContextAccessor)
         {
             this.configuration = configuration;
+            this.httpContextAccessor = httpContextAccessor;
         }
         public AuthenticationResponse BuildToken(User user)
         {
@@ -26,7 +29,8 @@ namespace Services.Utilities
             {
                 new Claim("Id", user.Id.ToString()),
                 new Claim("FamilyId", user.FamilyId.ToString()),
-                new Claim("Role", user.RoleId.ToString())
+                new Claim("RoleId", user.RoleId.ToString())
+                //new Claim("FamilyCode", )
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(configuration["jwtKey"]));

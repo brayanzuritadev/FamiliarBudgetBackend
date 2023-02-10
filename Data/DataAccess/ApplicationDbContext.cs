@@ -16,5 +16,6 @@ namespace Data.DataAccess
         }
         public DbSet<User> Users { get; set; }
         public DbSet<Family> Families { get; set; }
+        public DbSet<Transaction> Transactions { get; set; }
     }
 }
