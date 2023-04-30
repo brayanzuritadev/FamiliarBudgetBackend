@@ -37,5 +37,30 @@ namespace Api.Controllers
 
             return token;
         }
+
+        [HttpGet]
+        public ActionResult<List<UserResponse>> GetUsers()
+        {
+            var listUsers = accountService.GetAcounts();
+            
+            if(listUsers == null) 
+            {
+                return BadRequest();
+            }
+
+            return listUsers;
+        }
+
+        [HttpGet("renew")]
+        public ActionResult<AuthenticationResponse> GetRefreshToken()
+        {
+            var updatedToken = accountService.GetRefreshToken();
+            if(updatedToken == null) 
+            {
+                return BadRequest();
+            }
+
+            return updatedToken;
+        }
     }
 }

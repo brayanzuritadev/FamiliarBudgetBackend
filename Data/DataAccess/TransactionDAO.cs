@@ -2,6 +2,7 @@
 using AutoMapper.QueryableExtensions;
 using Data.DTOs;
 using Data.Entity;
+using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.ChangeTracking;
 using System;
@@ -47,13 +48,10 @@ namespace Data.DataAccess
             return transactions;
         }
 
-        public List<Transaction> GetAllTransactionsByDate(string familyCode, DateTime startDate, DateTime endDate)
+        public List<TransactionResponse> GetAllTransactionsByDate(string familyCode, DateTime startDate, DateTime endDate)
         {
-            var transactions = context.Transactions.Include(t => t.User)
-                                .Where( t => t.Family.FamilyCode == familyCode
-                                        && t.Date >= startDate
-                                        && t.Date <= endDate
-                                ).ToList();
+
+            var transactions = context.Set<TransactionResponse>().FromSqlRaw("EXEC S_Get_Transaction_by_Date @FamilyCode = {0}, @StartDate = {1}, @EndDate = {2}", familyCode, startDate, endDate).ToList();
 
             return transactions;
         }
@@ -61,14 +59,15 @@ namespace Data.DataAccess
         public List<Transaction> GetAllTransactionsByFamilyCode(string familyCode)
         {
 
-            var transactions = context.Transactions.Include(t => t.User).Where(t => t.Family.FamilyCode==familyCode).ToList();
+ 
+            var transactions = context.Transactions.FromSqlRaw("EXEC S_Get_Transactions @familyCode", new SqlParameter("@familyCode", familyCode)).ToList();
 
             return transactions;
         }
 
         public Transaction GetTransaction(int id)
         {
-            var transaction = context.Transactions.FirstOrDefault(x => x.Id == id);
+            var transaction = context.Transactions.FirstOrDefault(x => x.TransactionId == id);
             return transaction;
         }
 

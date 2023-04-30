@@ -12,7 +12,9 @@ namespace Services
     public interface IAccountService
     {
         public AuthenticationResponse CreateAccount(UserCreation userCreation);
-        public List<User> GetAcounts(string familyCode);
+        public List<UserResponse> GetAcounts();
+
+        public AuthenticationResponse GetRefreshToken();
         public User UpdateAccount(int id);
         public bool DeleteAccount(int id);
         public User GetAccountByEmail(string email);

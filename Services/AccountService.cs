@@ -18,13 +18,15 @@ namespace Services
         private readonly IMapper mapper;
         private readonly UserValidator userValidator;
         private readonly IFamilyDAO familyDAO;
+        private readonly CurrentUser currentUser;
         private readonly Hash hash;
         private readonly TokenGenerator tokenGenerator;
 
         public AccountService(IAccountDAO userDAO, 
             IMapper mapper, 
             UserValidator userValidator, 
-            IFamilyDAO familyDAO, 
+            IFamilyDAO familyDAO,
+            CurrentUser currentUser,
             Hash hash,
             TokenGenerator tokenGenerator)
         {
@@ -32,6 +34,7 @@ namespace Services
             this.mapper = mapper;
             this.userValidator = userValidator;
             this.familyDAO = familyDAO;
+            this.currentUser = currentUser;
             this.hash = hash;
             this.tokenGenerator = tokenGenerator;
         }
@@ -65,9 +68,33 @@ namespace Services
             throw new NotImplementedException();
         }
 
-        public List<User> GetAcounts(string familyCode)
+        public List<UserResponse> GetAcounts()
         {
-            throw new NotImplementedException();
+            var user = currentUser.GetCurrentUser();
+
+            if (user==null)
+            {
+                return null;
+            }
+
+            var users = userDAO.GetAccounts(user.FamilyId);
+
+            var userList = mapper.Map<List<UserResponse>>(users);
+
+            return userList;
+        }
+
+        public AuthenticationResponse GetRefreshToken()
+        {
+
+            var user = currentUser.GetCurrentUser() as User;
+
+            if (user == null)
+            {
+                return null;
+            }
+
+            return tokenGenerator.BuildToken(user);
         }
 
         public AuthenticationResponse LoginAccount(AccountCredentials accountCredentials)

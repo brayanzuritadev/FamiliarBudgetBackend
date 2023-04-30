@@ -27,7 +27,7 @@ namespace Services.Utilities
         {
             var claims = new List<Claim>()
             {
-                new Claim("Id", user.Id.ToString()),
+                new Claim("Id", user.UserId.ToString()),
                 new Claim("FamilyId", user.FamilyId.ToString()),
                 new Claim("RoleId", user.RoleId.ToString())
                 //new Claim("FamilyCode", )
@@ -43,6 +43,9 @@ namespace Services.Utilities
 
             return new AuthenticationResponse
             {
+                UserId= user.UserId,
+                FamilyId= user.FamilyId,
+                RoleId= user.RoleId,
                 Token = new JwtSecurityTokenHandler().WriteToken(securityToken),
                 Expiration = expiration,
             };

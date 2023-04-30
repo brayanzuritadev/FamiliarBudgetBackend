@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj": {}
+    "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj": {}
   },
   "projects": {
-    "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj": {
+    "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj",
+        "projectUniqueName": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj",
         "projectName": "Data",
-        "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj",
+        "projectPath": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj",
         "packagesPath": "C:\\Users\\Brayan\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\obj\\",
+        "outputPath": "D:\\release\\FamiliarBudgetApi\\Data\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Brayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -73,14 +73,14 @@
         }
       }
     },
-    "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj": {
+    "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj",
+        "projectUniqueName": "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj",
         "projectName": "Services",
-        "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj",
+        "projectPath": "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj",
         "packagesPath": "C:\\Users\\Brayan\\.nuget\\packages\\",
-        "outputPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\obj\\",
+        "outputPath": "D:\\release\\FamiliarBudgetApi\\Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Brayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -97,8 +97,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj": {
-                "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj"
+              "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj": {
+                "projectPath": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj"
               }
             }
           }

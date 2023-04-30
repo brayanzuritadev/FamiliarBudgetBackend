@@ -13,7 +13,6 @@ namespace Services
     {
         private readonly ITransactionDAO transactionDAO;
         private readonly IMapper mapper;
-        private readonly IHttpContextAccessor contextAccessor;
         private readonly CurrentUser currentUser;
         private readonly IFamilyDAO familyDAO;
 
@@ -26,7 +25,6 @@ namespace Services
         {
             this.transactionDAO = transactionDAO;
             this.mapper = mapper;
-            this.contextAccessor = contextAccessor;
             this.currentUser = currentUser;
             this.familyDAO = familyDAO;
         }
@@ -34,14 +32,14 @@ namespace Services
         {
             var user = currentUser.GetCurrentUser();
 
-            if (user.Id != id)
+            if (user.UserId != id)
             {
                 return null;
             }
 
             var transaction = mapper.Map<Transaction>(transactionCreation);
 
-            transaction.UserId = user.Id;
+            transaction.UserId = user.UserId;
 
             var transactionCreated = transactionDAO.AddTransaction(transaction);
 
@@ -59,7 +57,7 @@ namespace Services
 
             var user = currentUser.GetCurrentUser();
 
-            if (id != user.Id)
+            if (id != user.UserId)
             {
                 return null;
             }
@@ -125,7 +123,7 @@ namespace Services
         {
             var user = currentUser.GetCurrentUser();
 
-            if (userId != user.Id)
+            if (userId != user.UserId)
             {
                 return null;
             }
@@ -139,13 +137,13 @@ namespace Services
         {
             var user = currentUser.GetCurrentUser();
 
-            if (userId != user.Id)
+            if (userId != user.UserId)
             {
                 return null;
             }
 
             var transaction = mapper.Map<Transaction>(transactionCreation);
-            transaction.Id = id;
+            transaction.UserId = id;
             var transactionCreated = transactionDAO.UpdateTransaction(transaction);
             return transactionCreated;
         }

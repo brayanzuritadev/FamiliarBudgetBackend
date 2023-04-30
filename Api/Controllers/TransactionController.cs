@@ -19,12 +19,10 @@ namespace Api.Controllers
     public class TransactionController : ControllerBase
     {
         private readonly ITransactionService transactionService;
-        private readonly IHttpContextAccessor contextAccessor;
 
         public TransactionController(ITransactionService transactionService, IHttpContextAccessor contextAccessor)
         {
             this.transactionService = transactionService;
-            this.contextAccessor = contextAccessor;
         }
 
         [HttpPost]

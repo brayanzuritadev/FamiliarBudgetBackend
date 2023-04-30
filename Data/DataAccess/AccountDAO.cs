@@ -24,9 +24,9 @@ namespace Data.DataAccess
             return userEntity.Entity;
         }
 
-        public List<User> GetAccounts(User user)
+        public List<User> GetAccounts(int familyCodeId)
         {
-            var Users = context.Users.Where(x => x.FamilyId == user.FamilyId).ToList();
+            var Users = context.Users.Where(x => x.FamilyId == familyCodeId).ToList();
             return Users;
         }
 

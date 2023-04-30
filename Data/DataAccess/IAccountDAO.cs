@@ -10,7 +10,7 @@ namespace Data.DataAccess
     public interface IAccountDAO
     {
         public User CreateAccount(User user);
-        public List<User> GetAccounts(User user);
+        public List<User> GetAccounts(int familyCodeId);
         public User GetAccountByEmail(string email);
     }
 }

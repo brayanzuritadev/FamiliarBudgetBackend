@@ -19,8 +19,8 @@ namespace Services.Utilities
             CreateMap<FamilyCreation,Family>();
             CreateMap<User, UserResponse>();
             CreateMap<TransactionCreation,Transaction>();
-            CreateMap<Transaction, TransactionResponse>()
-                .ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.User.Name));
+            CreateMap<Transaction, TransactionResponse>();
+                //.ForMember(dest => dest.Name, opt => opt.MapFrom(src => src.User.Name));
                 
             CreateMap<User,TransactionResponse>();
         }

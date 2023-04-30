@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "6fqZP5aME1F3tm1gZbjM/YpQUBOAAWGm32chrkg132YSnGmOpSEtujFYr4KrVeveWa2ECrUTqCf2pNW7uKBW6Q==",
+  "dgSpecHash": "HN1DP8dDcdMx3Cp5B26DJkUuvi3twmLgivc29PunzPlWNID6YYJjNEs9Nyi2ISJBxH3Or2mGL2Ucd0fa/BmK7w==",
   "success": true,
-  "projectFilePath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj",
+  "projectFilePath": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Brayan\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Brayan\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

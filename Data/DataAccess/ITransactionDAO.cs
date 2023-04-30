@@ -26,6 +26,6 @@ namespace Data.DataAccess
         public List<Transaction> GetAllTransactionsByFamilyCode(string familyCode);
 
         //el usuario obtendra todas las transacciones de la familia
-        public List<Transaction> GetAllTransactionsByDate(string familyCode, DateTime startDate, DateTime endDate);
+        public List<TransactionResponse> GetAllTransactionsByDate(string familyCode, DateTime startDate, DateTime endDate);
     }
 }

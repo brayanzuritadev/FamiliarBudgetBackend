@@ -22,14 +22,27 @@ namespace Services.Utilities
         {
             var userCurrent = contextAccessor.HttpContext.User.Identity as ClaimsIdentity;
 
-            var user = new User
+            if (!userCurrent.IsAuthenticated)
             {
-                Id = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "Id").Value),
-                FamilyId = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "FamilyId").Value),
-                RoleId = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "RoleId").Value),
-            };
+                return null;
+            }
+            try
+            {
+                var user = new User
+                {
+                    UserId = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "Id").Value),
+                    FamilyId = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "FamilyId").Value),
+                    RoleId = Int32.Parse(userCurrent.Claims.FirstOrDefault(x => x.Type == "RoleId").Value),
+                };
 
-            return user;
+                return user;
+            }
+            catch(Exception ex)
+            {
+                return null;
+            }
+
+            
         }
     }
 }

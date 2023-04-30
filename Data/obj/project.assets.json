@@ -3289,11 +3289,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj",
+      "projectUniqueName": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj",
       "projectName": "Data",
-      "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj",
+      "projectPath": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj",
       "packagesPath": "C:\\Users\\Brayan\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\obj\\",
+      "outputPath": "D:\\release\\FamiliarBudgetApi\\Data\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Brayan\\AppData\\Roaming\\NuGet\\NuGet.Config",

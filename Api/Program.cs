@@ -24,6 +24,8 @@ builder.Services.AddTransient<IAccountDAO, AccountDAO>();
 builder.Services.AddTransient<IAccountService, AccountService>();
 builder.Services.AddTransient<ITransactionService, TransactionService>();
 builder.Services.AddTransient<ITransactionDAO, TransactionDAO>();
+builder.Services.AddTransient<IIncomeDAO, IncomeDAO>();
+builder.Services.AddTransient<IIncomeService, IncomeService>();
 //builder.Services.AddScoped<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddTransient<UserValidator>();
@@ -82,18 +84,21 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         builder =>
     {
-        builder.WithOrigins("http://localhost:8100").AllowAnyMethod().AllowAnyHeader();
+        //builder.WithOrigins("http://localhost:4200").AllowAnyMethod().AllowAnyHeader();
+        builder.AllowAnyOrigin()
+                .AllowAnyHeader()
+                .AllowAnyMethod();
     });
 });
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+/*if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}
+}*/
 
 app.UseHttpsRedirection();
 

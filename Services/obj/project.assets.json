@@ -3368,11 +3368,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj",
+      "projectUniqueName": "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj",
       "projectName": "Services",
-      "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\Services.csproj",
+      "projectPath": "D:\\release\\FamiliarBudgetApi\\Services\\Services.csproj",
       "packagesPath": "C:\\Users\\Brayan\\.nuget\\packages\\",
-      "outputPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Services\\obj\\",
+      "outputPath": "D:\\release\\FamiliarBudgetApi\\Services\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Brayan\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -3389,8 +3389,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj": {
-              "projectPath": "D:\\ProjectTest\\FamiliarBudgetApi\\Data\\Data.csproj"
+            "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj": {
+              "projectPath": "D:\\release\\FamiliarBudgetApi\\Data\\Data.csproj"
             }
           }
         }
