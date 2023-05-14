@@ -10,3 +10,15 @@ D:\ProjectTest\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.dll
 D:\ProjectTest\FamiliarBudgetApi\Data\obj\Debug\net6.0\refint\Data.dll
 D:\ProjectTest\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.pdb
 D:\ProjectTest\FamiliarBudgetApi\Data\obj\Debug\net6.0\ref\Data.dll
+D:\release\FamiliarBudgetApi\Data\bin\Debug\net6.0\Data.deps.json
+D:\release\FamiliarBudgetApi\Data\bin\Debug\net6.0\Data.dll
+D:\release\FamiliarBudgetApi\Data\bin\Debug\net6.0\Data.pdb
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.csproj.AssemblyReference.cache
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.AssemblyInfoInputs.cache
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.AssemblyInfo.cs
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.csproj.CoreCompileInputs.cache
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.dll
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\refint\Data.dll
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\Data.pdb
+D:\release\FamiliarBudgetApi\Data\obj\Debug\net6.0\ref\Data.dll
